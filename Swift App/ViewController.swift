@@ -3,7 +3,7 @@
 //  Swift App
 //
 //  Created by Mac on 5/23/17.
-//  Copyright © 2017 Mac. All rights reserved.
+//  Copyright © 2017 Mac. All rights reserved..
 //
 
 import UIKit
@@ -12,14 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var TheLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func ButtonTapped(_ sender: Any) {
-        TheLabel.text = "Hello there!"
-        tapCount = tapCount + 1
-        if tapCount >= 10{
-            TheLabel.text = "You tapped the button 10 times!"
-        }
+       TheLabel.text = "The answer is... \(Double(text1.text!)! + Double(text2.text!)!)"
             }
    
     override func viewDidLoad() {
